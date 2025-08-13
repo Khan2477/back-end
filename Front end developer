@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+  <title>Social Awareness Web Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Social Awareness Web Application</h1>
+    <p>Intern Project</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>User Registration</h2>
+      <label>Username:<input type="text" id="regUsername" placeholder="Enter your username"></label>
+      <label>Password:<input type="password" id="regPassword" placeholder="Enter your password"></label>
+      <button onclick="registerUser()">Register</button>
+    </section>
+
+    <section class="card">
+      <h2>Login</h2>
+      <label>Username:<input type="text" id="loginUsername" placeholder="Enter your username"></label>
+      <label>Password:<input type="password" id="loginPassword" placeholder="Enter your password"></label>
+      <button onclick="loginUser()">Login</button>
+      <button class="secondary">Logout</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
