@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Web Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startFlippingPosts()">
+
+  <!-- Page Header -->
+  <header>
+    <h1>Social Web Application</h1>
+  </header>
+
+  <!-- Main Container -->
+  <div class="main-container">
+
+    <!-- Left: Login -->
+    <div class="card" id="loginSection">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button onclick="loginUser()">Login</button>
+    </div>
+
+    
+
+    <!-- Right: Registration -->
+    <div class="card" id="registerSection">
+      <h2>Register</h2>
+      <input type="text" id="regUsername" placeholder="Username">
+      <input type="password" id="regPassword" placeholder="Password">
+      <button onclick="registerUser()">Register</button>
+    </div>
+
+<div id="logoutSection" style="text-align:center; margin-top:20px;">
+  <button onclick="logoutUser()">Logout</button>
+</div>
+    
+  </div>
+
+  <!-- Project Overview Section -->
+  <div id="overview">
+    <h2>Project Overview</h2>
+    <p>This social awareness platform is overseen by an admin, focuses on environmental causes, and does not involve politics.</p>
+    <div id="flipPosts" class="flip-posts"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
