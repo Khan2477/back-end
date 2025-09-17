@@ -3,6 +3,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const loginRoute = require('./login');
 const registerRoute = require('./register');
+const campaignRoute = require('./routes/campaign');
+app.use('/campaigns', campaignRoute);
 
 
 const app = express();
