@@ -1,37 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Social Awareness Web Application</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Awareness Web Application</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Social Awareness Web Application</h1>
-        <p>Intern Project</p>
-    </header>
+  <!-- Page Header -->
+  <header>
+    <h1>Social Web Application</h1>
+  </header>
 
-    <main class="container">
-        <section id="registerSection" class="card">
-            <h2>User Registration</h2>
-            <label>Username: <input type="text" id="regUsername" placeholder="Enter your username"></label>
-            <label>Email: <input type="email" id="regEmail" placeholder="Enter your email"></label>
-            <label>Password: <input type="password" id="regPassword" placeholder="Enter your password"></label>
-            <button id="register-btn">Register</button>
-        </section>
+  <!-- Welcome message -->
+  <div id="welcomeMessage" style="text-align:center; margin:10px; font-weight:bold;">
+    <!-- sẽ được cập nhật bằng JS -->
+  </div>
 
-        <section id="loginSection" class="card">
-            <h2>Login</h2>
-            <label>Username: <input type="text" id="loginUsername" placeholder="Enter your username"></label>
-            <label>Password: <input type="password" id="loginPassword" placeholder="Enter your password"></label>
-            <button id="login-btn">Login</button>
-        </section>
-        
-        <section id="welcomeSection" class="card" style="display: none;">
-            <h2 id="welcomeMessage"></h2>
-            <button id="logout-btn" class="secondary">Logout</button>
-        </section>
-    </main>
+  <!-- Main Container -->
+  <div class="main-container">
 
-    <script src="main.js"></script>
+    <!-- Left: Login -->
+    <div class="card" id="loginSection">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button onclick="loginUser()">Login</button>
+    </div>
+
+    <!-- Right: Registration -->
+    <div class="card" id="registerSection">
+      <h2>Register</h2>
+      <input type="text" id="regUsername" placeholder="Username">
+      <input type="email" id="regEmail" placeholder="Email"> <!-- 👈 thêm input email -->
+      <input type="password" id="regPassword" placeholder="Password">
+      <button onclick="registerUser()">Register</button>
+    </div>
+
+    <!-- Logout -->
+    <div id="logoutSection" style="text-align:center; margin-top:20px;">
+      <button onclick="logoutUser()">Logout</button>
+    </div>
+
+  </div>
+
+  <!-- Project Overview Section -->
+  <div id="overview">
+    <h2>Project Overview</h2>
+    <p>This social awareness platform is overseen by an admin, focuses on environmental causes, and does not involve politics.</p>
+    <div id="flipPosts" class="flip-posts"></div>
+  </div>
+
+  <!-- Campaign Section -->
+  <div id="campaignSection">
+    <h2>Post a Campaign</h2>
+    <input type="text" id="campaignTitle" placeholder="Campaign Title">
+    <textarea id="campaignDescription" placeholder="Campaign Description"></textarea>
+    <button onclick="createCampaign()">Create Campaign</button>
+  </div>
+
+  <!-- Campaign List -->
+  <div id="campaignList">
+    <h2>All Campaigns</h2>
+    <ul id="campaigns"></ul>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
